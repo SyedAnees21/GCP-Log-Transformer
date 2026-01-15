@@ -1,0 +1,27 @@
+# Source log files path or globs pattern to monitor, aggregate and deduplicate
+# Either the full path to a log file or a glob pattern can be used.
+# Example of full path: "/var/log/my-service/service.log"
+source-files:
+  - "D:/MetaGravity/Workspaces/MG-Tools/gcp-log-transformer/testing/service_*/*.log"
+  - "testing/*-service_*/*.log"
+
+# Time interval in seconds to wait before dumping the duplicated logs
+# to the aggregated log file.
+agg-interval: 20
+
+# Time interval in seconds to wait before prunning the old entries
+# from the in-memory cache.
+prune-interval: 2
+
+# Time interval in seconds to wait between each scan of the log files
+# to check for new entries.
+time-wait: 0.25
+
+# Logging level for in-app log configuration.
+log-level: "INFO"
+# Enable or disable logging to console.
+console-log: false
+# Enable or disable logging to a file.
+output-log: true
+# Path to the log file where in-app logs will be written.
+output-path: ./app-logs/gcp-transformer.log
