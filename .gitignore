@@ -1,0 +1,13 @@
+__pycache__/
+
+.vscode/
+
+venv/
+
+build/
+
+*.egg-info/
+
+app-logs/
+nssm-logs/
+testing/
